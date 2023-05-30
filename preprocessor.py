@@ -7,7 +7,7 @@ import os
 
 
 class Data(object):
-    def __init__(self, name, idx, random_seed=1024):
+    def __init__(self, name, idx = 0, random_seed=1024):
         np.random.seed(random_seed)
         # train_matrix = [user, item, rating] * N
         # test_matrix = [user, item, rating] * M
