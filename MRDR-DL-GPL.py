@@ -13,7 +13,7 @@ from metric import dcg_at_k, ndcg_at_k, recall_at_k, type_confirm
 i_exp= 0
 dataset =  'coat' # 'yahoo' #
 
-data_path = "../data/real-world/%s_cur0.data" % dataset
+data_path = "../data/real-world/%s/%s_cur0.data" % (dataset, dataset)
 file = open(data_path, "rb")
 obj = type_confirm(pickle.load(file))
 file.close()

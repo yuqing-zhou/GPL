@@ -148,10 +148,10 @@ class Data(object):
 
 
 if __name__ == '__main__':
-    if not os.path.exists("../data/real-world/"):
-        os.makedirs("../data/real-world/")
+    if not os.path.exists("../data/real-world/coat/"):
+        os.makedirs("../data/real-world/coat/")
     dataset = Data("coat")
-    file = open("../data/real-world/coat_cur0.data", "wb")
+    file = open("../data/real-world/coat/coat_cur0.data", "wb")
     # dataset = Data("yahoo")
     # file = open("../data/real-world/yahoo.data", "wb")
 
