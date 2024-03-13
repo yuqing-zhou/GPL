@@ -18,3 +18,8 @@
 ###### MRDR-GPL
 1. Set the l2_reg_lambda for CVR prediction as the value of the best l2_reg_lambda for CVR found in the baseline experiment.
 2. Run MRDR-DL-GPL.py
+
+## Correction
+03/13/2024
+
+There is a typo in Eq.(28). It should be divided by |D|^2 rather than |D|, as indicated in the last line of Eq.(27). The correct equation can be found on page 17 of the slides.
