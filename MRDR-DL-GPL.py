@@ -174,7 +174,7 @@ for i_lambda_ctr in range(1, 6):
                     y = convert[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
                     o = click[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
                     p = ctr[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
-                    batch_loss = dr_mf.train_batch(user_id, item_id, y, o, p, 'Imputation Learning')
+                    batch_loss = dr_mf.train_batch(user_id, item_id, y, o, p, 'MRDR-IL')
                     loss += batch_loss
                     record.write('Phase0: Initialize MRDR-DL model Epoch: %d Batch: %d  Imputation Learning Loss: %f\n' %
                                  (epoch, batch, batch_loss))
@@ -344,7 +344,7 @@ for i_lambda_ctr in range(1, 6):
                         y = convert[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
                         o = click[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
                         p = ctr[batch * dr_batch_size: min((batch + 1) * dr_batch_size, train_num)]
-                        batch_loss = dr_mf.train_batch(user_id, item_id, y, o, p, 'Imputation Learning')
+                        batch_loss = dr_mf.train_batch(user_id, item_id, y, o, p, 'MRDR-IL')
                         loss += batch_loss
                         record.write('Phase 1 Joint Learning MRDR-DL Batch: %d  Imputation Learning Loss: %f\n' % (batch, batch_loss))
 
